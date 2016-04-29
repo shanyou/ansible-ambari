@@ -1,0 +1,23 @@
+---
+#setup local repo for amabari and hdp repo
+- name: Install Requirements package
+  package: name={{item}} state=present
+  with_items:
+    - yum-utils
+    - createrepo
+    - httpd
+
+- name: Makesure www directory
+  file: path="/var/www/html" state=directory
+
+- name: Makesure hdp directory
+  file: path="/var/www/html/hdp" state=directory
+
+- name: untar ambari tar
+  unarchive: src={{ambari_tar}} dest=/var/www/html/ copy=no
+
+- name: untar ambari hdp tar
+  unarchive: src={{ambari_hdp_tar}} dest=/var/www/html/hdp copy=no
+
+- name: untar ambari hdp util tar
+  unarchive: src={{ambari_hdp_util_tar}} dest=/var/www/html/hdp copy=no

@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-ambari
+local_repo_enable: true
+ambari_tar: http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.2.1.1/ambari-2.2.1.1-centos7.tar.gz
+ambari_hdp_tar: http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.4.0.0/HDP-2.4.0.0-centos7-rpm.tar.gz
+ambari_hdp_util_tar: http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.20/repos/centos7/HDP-UTILS-1.1.0.20-centos7.tar.gz

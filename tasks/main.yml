@@ -1,0 +1,4 @@
+---
+# tasks file for ansible-ambari
+- include: local_repo.yml
+  when: local_repo_enable
